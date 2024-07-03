@@ -1,0 +1,8 @@
+# added new Proxmox LXC
+# Default Settings: 2GB RAM - 8GB Storage - 2vCPU
+# use Ubuntu server 
+
+apt-get update && apt-get upgrade -y && apt-get autoremove -y
+mkdir /jellyfin  // Verzeichnis erstellen
+nano /etc/fstab
+  //DEINEIP/jellyfin /jellyfin cifs credentials=/home/.smbcredentials,uid=1000,gid=1000 0 0
