@@ -23,7 +23,7 @@ ls                                                                              
 
 cd Movies/                                                                                        // Hiermit prüfen wird ob Dateien im NAS Ordner sind  
 
-apt install sudo curkl                                                                            // Pakete sudo und curl nach installieren für die installation von Jellyfin
+apt install sudo curl                                                                             // Pakete sudo und curl nach installieren für die installation von Jellyfin
 
 curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash                                     // Mit Enter besätigten und auf die aufforderung "press <Enter>" warten und wieder bestätigen
 
