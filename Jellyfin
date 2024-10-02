@@ -27,4 +27,4 @@ apt install sudo curl                                                           
 
 curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash                                     // Mit Enter besätigten und auf die aufforderung "press <Enter>" warten und wieder bestätigen
 
-# Kurz abwarten und dann wurde Jellyfin installiert, dies ist nur eine gedanken stüze wir man dies im Proxmox aufsetzt
+# Kurz abwarten und dann wurde Jellyfin installiert, dies ist nur eine gedanken stütze wie man eine Instanz unter Proxmox aufsetzt
