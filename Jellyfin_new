@@ -1,0 +1,30 @@
+# https://jellyfin.org/docs/ !Pre-reading!
+# added new Proxmox LXC
+# Default Settings: 2GB RAM - 8GB Storage - 2vCPU
+# use Ubuntu server 
+
+apt-get update && apt-get upgrade -y && apt-get autoremove -y
+
+mkdir /jellyfin                                                                                   // Create directory in LXC container (server)
+
+nano /etc/fstab                                                                                   // The NAS drive is mounted here
+//YOURIP/jellyfin /jellyfin cifs credentials=/home/.smbcredentials,uid=1000,gid=1000 0 0         // YOUR IP must be that of the NAS if the data is located externally.
+                                                                                                  // On the NAS I have created a folder called /jellyfin where all my media library content is stored
+
+nano /home/.smbcredentials                                                                        // This file still needs to be created
+username=                                                                                         // User name of the NAS user who is authorised to access the folder 
+password=                                                                                         // Password of the NAS user who is authorised to access the folder
+
+mount -a                                                                                          // The folder is mounted with the command and if no error occurs, everything has been entered correctly
+
+cd /jellyfin/                                                                                     // Change to folder
+
+ls                                                                                                // check whether the folders were found by the NAS
+
+cd Movies/                                                                                        // This is used to check whether files are in the NAS folder  
+
+apt install sudo curl                                                                             // Install the packages sudo and curl for the installation of Jellyfin
+
+curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash                                     // Confirm with Enter and wait for the prompt ‘press <Enter>’ and confirm again
+
+# Wait a moment and then Jellyfin was installed, this is a help guide on how to set up an instance under Proxmox
