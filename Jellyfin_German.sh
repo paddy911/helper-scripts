@@ -4,10 +4,17 @@
 # Default Settings: 2GB RAM - 8GB Storage - 2vCPU
 # use Ubuntu server 
 
-sudo apt-get update && apt-get upgrade -y && apt-get autoremove -y
+# Aktualisieren Sie das Paketverzeichnis
+sudo apt update
 
-ls /home/$User/Dokumente
-mkdir /Testordner
+# Aktualisieren Sie alle Pakete
+sudo apt full-upgrade -y
+
+# Entfernen Sie nicht benötigte Pakete
+sudo apt autoremove -y
+
+# Bereinigen Sie den Cache
+sudo apt clean
 
 
 #mkdir /jellyfin                                                                                   // Verzeichnis im LXC Container (Server) erstellen
