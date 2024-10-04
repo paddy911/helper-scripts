@@ -1,10 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 # https://jellyfin.org/docs/ !Vorablesen!
 # added new Proxmox LXC
 # Default Settings: 2GB RAM - 8GB Storage - 2vCPU
 # use Ubuntu server 
 
-apt-get update && apt-get upgrade -y && apt-get autoremove -y
+sudo apt-get update && apt-get upgrade -y && apt-get autoremove -y
+
+ls /home/$User/Dokumente
+mkdir /Testordner
+
 
 #mkdir /jellyfin                                                                                   // Verzeichnis im LXC Container (Server) erstellen
 
