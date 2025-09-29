@@ -1,3 +1,6 @@
+# Quelle Docs: https://docs.immich.app/install/docker-compose
+# Quelle Update: https://docs.immich.app/install/upgrading/
+
 cd ./immich-app/            // Ins verzeichnus von der Immich Installation wechseln
 docker compose pull && docker compose up -d            //Container herrunterfahren ueue daten laden und wieder starten
-docker image prune            //Alte Container daten von immich werden gelöscht um Speicherplatz freizugeben
+docker image prune            //Alte Container daten von immich werden gelöscht um Speicherplatz freizugeben 
